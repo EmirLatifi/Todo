@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300&family=Roboto+Slab&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+  .todo-container {
+    max-width: 960px;
+    min-height: 940px;
+    margin:5px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+  }
+  .header{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .addTodo {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:#076486;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+  }
+  .todo-input  {
+    width: 40%;
+    height: 37px;
+    padding: 8px;
+    background-color: white;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline:none;
+    font-family: 'Roboto Slab', serif;
+  }
+  .todo-option  {
+    display: flex;
+    justify-content:center;
+    gap: 5px;
+    width: 30%;
+    height: 37px;
+    margin-bottom: 10px;
+    
+  }
+  select {
+    width: 180px;
+    padding: 5px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.5s ease;
+    border: 2px solid #ddd;
+    font-family: 'Roboto Slab', serif;
+    cursor: pointer;
+  }
+  select:hover {
+    border-color:#77e743;
+  }
+
+  option {
+    padding: 10px;
+    background-color:#ffffff;
+    color: black;
+  }
+  option:hover {
+    background-color: #076486;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .addCategory,.removeCategory {
+    width:40px;
+    height:17px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  .addCategory:hover {
+    background-color:#77e743;
+    color:white;
+    transform: scale(1.03);
+    box-shadow: 2px 2px 2px  rgb(0, 0, 0);
+  }
+  .removeCategory:hover {
+    background-color: #fd4032;;
+    color:white;
+    transform: scale(1.03);
+    box-shadow: 2px 2px 2px  rgb(0, 0, 0);
+  }
+   
+  .openModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .openModal.open {
+    display: block;
+  }
+  .close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size:20px;
+    font-weight: 600;
+    cursor:default;
+    color:white
+  }
+  .addCategory-content,.removeCategory-content {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px ;
+  }
+  .allCategories {
+    width: 400px;
+    position: relative;
+    bottom: 120px;
+    color: white;
+    border: 2px white solid;
+    padding: 5px 20px;
+    background-color: #076486;
+    border-radius: 5px;
+
+  }
+  .allCategories p {
+    font-size:30px;
+    margin-bottom:5px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+  }
+  .allCategories ol {
+    padding-left:15px;
+  }
+  .allCategories li{
+    font-size:30px;
+    padding-bottom: 5px;
+    font-family: 'Playfair', serif;
+  }
+  
+  .addH2, .removeH2 {
+    font-size:37px;
+    margin-bottom: 10px;
+    color:white;
+    font-family: 'Roboto Slab', serif;
+  }
+  .addCategory-elements,.removeCategory-elements {
+    width: 600px;
+    height: 200px;
+    background-color: #076486;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid rgb(219, 218, 218);
+    border-radius: 5px;
+  }
+  .addCategory-elements input,.removeCategory-elements input {
+    width: 70%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+  }
+  .add, .remove {
+    width: 150px;
+    height: 40px;
+    font-size:25px;
+    border-radius: 5px;
+    border:none;
+    background-color: white;
+    font-family: 'Playfair', serif;
+  }
+
+  .add:hover{
+    background-color: #77e743;
+    color:white;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 6px  rgb(0, 0, 0);
+  }
+  .remove:hover {
+    background-color: #fd4032;
+    color:white;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 6px  rgb(0, 0, 0);
+  }
+  
+  .todo-button  {
+    width: 13%;
+    height: 37px;
+    background-color: white;
+    color: black;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+  }
+  .todo-button:hover{
+    background-color:#77e743;;
+    color:#fff;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 8px rgb(0, 0, 0);
+  }
+  
+  .footer {
+    width:100%;
+  }
+  
+  .categories { 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+
+  .category {
+    height: 355px;
+    background-color:rgb(7, 100, 134);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  h3 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 27px;
+    letter-spacing: 1px;
+    color:white;
+    font-family: 'Playfair', serif;
+  }
+  
+  .todo-ul {
+    list-style-type: none;
+    padding: 0px 5px;
+    margin: 0;
+  }
+  
+  .todo-li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 5px 10px 5px;
+    color: white;
+    background: rgb(4,109,154);
+    background: linear-gradient(90deg, rgba(4,109,154,1) 0%, rgba(34,153,198,1) 91%); 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .todo-li {
+    animation: li 0.7s ease;
+  }
+
+  @keyframes li {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .completeIcon {
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+    margin-right: 5px;
+    font-size: 20px;
+  }
+  .completeIcon:hover {
+    color:#77e743;
+  }
+  .deleteIcon {
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+    margin-left: 5px;
+    font-size: 18px;
+  }
+  .deleteIcon:hover {
+    color:#f6190a;
+  }
+  
+  .todo-li.completed {
+    text-decoration: line-through;
+    color: rgb(222, 30, 30);
+  }
+  
+
+@media (max-width: 768px) {
+.todo-container{
+  width: 100%;
+}
+.addTodo {
+   flex-direction: column;
+    padding: 20px;
+  }
+  .todo-input {
+    width: 350px;
+  }
+  .todo-option{
+    width: 250px;
+  }
+  select {
+    width:95%;
+  }
+  .addH2, .removeH2 {
+    font-size:30px;
+  }
+  .allCategories{
+    width: 300px;
+  }
+  h1{
+    font-size:25px;
+  }
+  p{
+    font-size:25px;
+  }
+
+  .addCategory-elements,.removeCategory-elements {
+    width: 70%;
+    flex-direction: column;
+    gap: 15px;
+    }
+  .addCategory-elements input,.removeCategory-elements input {
+      width: 70%;
+      height: 35px;
+    }
+  
+  .add, .remove {
+    width: 100px;
+    height: 30px;
+    }
+
+  .todo-button{
+    width: 120px;
+    height: 35px;
+  }
+
+.categories {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-container{
+    width: 100%;
+  }
+  .todo-input  {
+    width: 250px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .todo-option  {
+    width: 200px;;
+    height:35px;
+  }
+  select {
+    font-size:14px;
+    letter-spacing: 0.4px;
+  }
+  .addCategory,.removeCategory {
+    width: 40px;
+  }
+
+  .todo-button{
+    width: 90px;
+    height: 35px;
+    font-size:14px;
+  }
+  .addH2,.removeH2 {
+    font-size:25px;
+  }
+  .allCategories{
+    width: 200px;
+  }
+  h1{
+    font-size:25px;
+    margin-bottom: 5px;
+  }
+  p{
+    font-size:25px;
+  }
+
+  .addCategory-elements,.removeCategory-elements {
+    width:65%;
+  }
+  .addCategory-elements input,.removeCategory-elements input {
+    width: 70%;
+    height: 35px;
+  }
+
+  .add, .remove {
+  width: 100px;
+  height: 30px;
+  }
+}
