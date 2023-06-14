@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# ToDo-list
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Description
+Welcome to my project, this is a todo list application made in React Js.
+This application allows users to add different categories, then in them to put events and tasks that they have to do, they can highlight those that they have completed or delete those that they don't want, they can also add and delete categories according to desire.
+I hope you will like this application, even though it is simple
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+   ```shell
+   git clone https://github.com/EmirLatifi/Todo.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies:
+   ```shell
+   cd Todo
+   npm install
 
-### `npm test`
+## Usage
+   To start the project, run the following command:
+   ```shell
+   npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+Open your web browser and visit http://localhost:3000 to access the application.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Use
+1.Add a task or event,then click the plus button to add a category related to that task
+![todo1](https://github.com/EmirLatifi/Todo/assets/96444379/b909d94e-06a5-48b8-bb84-445e942ac84b)
+***
+2.After pressing the button you will see this view, write the category and click the add button
+![todo2](https://github.com/EmirLatifi/Todo/assets/96444379/a2b3ee50-60e5-4337-8370-25cfdc450e7a)
+***
+3.Select the category and click the Add Todo button
+![Todo3](https://github.com/EmirLatifi/Todo/assets/96444379/10884eb2-ef1c-4a6c-8223-440dece52017)
+***
+4.The task you have written will be added to that category, when you finish it you can click on the TIk sign, or if you want to delete it click on the Trash sign
+![todo4](https://github.com/EmirLatifi/Todo/assets/96444379/6ef9332e-7d5f-4ff1-a3db-00839da16288)
+***
+5.When you want to delete a category, click on the minus signs and you will see this view, above you have categories that exist, below the input you have to write the name of the category you want to delete and click the remove button
+![todo5](https://github.com/EmirLatifi/Todo/assets/96444379/6fef103a-9329-4a27-bd33-8ea5f82348e8)
+***
+6.After deleting the category, the view will look like this
+![todo6](https://github.com/EmirLatifi/Todo/assets/96444379/97357af8-5cb6-43e7-a651-333861d0c057)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+  We welcome any and all contributions! Here are some ways you can get started:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   1. Report bugs: If you encounter any bugs, please let us know. Open up an issue and let us know the problem.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   2. Contribute code: If you are a developer and want to contribute, follow the instructions below to get started!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   3. Suggestions: If you don't want to code but have some awesome ideas, open up an issue explaining some updates or imporvements you would like to see!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
