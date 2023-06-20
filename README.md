@@ -3,7 +3,7 @@
 
 
 ## Description
-Welcome to my project, this is a todo list application made in React Js.
+Welcome to my project, this is a todo list application made with React Js.
 This application allows users to add different categories, then in them to put events and tasks that they have to do, they can highlight those that they have completed or delete those that they don't want, they can also add and delete categories according to desire.
 I hope you will like this application, even though it is simple
 
